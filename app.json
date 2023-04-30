@@ -3,7 +3,7 @@
     "name": "my-app",
     "slug": "my-app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -18,13 +18,29 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "intentFilters": [
+        {
+          "action": "MAIN",
+          "category": [
+            "LEANBACK_LAUNCHER"
+          ]
+        }
+      ],
+      "package": "com.asankulovt.myapp"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "package": "com.asankulovt.myapp",
+    "extra": {
+      "eas": {
+        "projectId": "26248e06-43fd-4a01-928c-ff9c9852071a"
+      }
+    }
+  },
+  "web": {
+    "favicon": "./assets/favicon.png"
+  },
+  "extra": {
+    "eas": {
+      "projectId": "26248e06-43fd-4a01-928c-ff9c9852071a"
     }
   }
 }
